@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# Todo Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This application is a microfrontend Todo List application built with React and TypeScript. It allows users to create, manage and filter todo tasks. The application consists of these microfrontend modules:
 
-In the project directory, you can run:
+1. **Todo**: Responsible to display todo list.
+2. **TodoForm**: Responsible for rendering input box and button to add a todo.
+3. **TodoList**: Responsible for rendering body of todo list. It shows filters and list of todo.
+4. **TodoItem**: Responsible for rendering individual todos.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run this application locally, follow these steps:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone below repository to your local machine:
 
-### `npm test`
+   ```bash
+       git clone https://github.com/KetanAgarwal/todo-list.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
 
-### `npm run build`
+   ```bash
+       cd todo-list
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies using npm or yarn:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+       npm install
+       # or
+       yarn install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server:
 
-### `npm run eject`
+   ```bash
+       npm start
+       # or
+       yarn start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Open your browser and visit `http://localhost:3000` to view the application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Add new task by entering a task descrition in input field and pressing `Add Todo`.
+- Mark tasks as completed by clicking on the checkbox next to each task.
+- Filter the todo tasks list by selecting one of the option of dropdown i.e. all, active and completed.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Features
 
-## Learn More
+- Add new todo task.
+- Mark todo task completed or active.
+- Filter todo task based on their completionn status (all, active, completed).
+- Persistance of the todo tasks using `localStorage` to ensure data persistence across page refreshes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Architecture
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This application follows a microfrontend architecture, with sepearte module for todo list, rending individual todo items and filter controls. Each module operates independently and contributes to the overall functionality of the application.
+
+## Technologies Used
+
+- React Js
+- TypeScript
+- HTML5 & CSS3
+- Webpack
