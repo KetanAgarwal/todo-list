@@ -45,7 +45,7 @@ To run this application locally, follow these steps:
 
 ## Usage
 
-- Add new task by entering a task descrition in input field and pressing `Add Todo`.
+- Add new task by entering a task description in input field and pressing `Add Todo`.
 - Mark tasks as completed by clicking on the checkbox next to each task.
 - Filter the todo tasks list by selecting one of the option of dropdown i.e. all, active and completed.
 
@@ -53,16 +53,12 @@ To run this application locally, follow these steps:
 
 - Add new todo task.
 - Mark todo task completed or active.
-- Filter todo task based on their completionn status (all, active, completed).
-- Persistance of the todo tasks using `localStorage` to ensure data persistence across page refreshes.
+- Filter todo task based on their completion status (all, active, completed).
+- Persistence of the todo tasks using `localStorage` to ensure data persistence across page refreshes.
 
-## Architecture
-
-This application follows a microfrontend architecture, with sepearte module for todo list, rending individual todo items and filter controls. Each module operates independently and contributes to the overall functionality of the application.
 
 ## Technologies Used
 
 - React Js
 - TypeScript
-- HTML5 & CSS3
 - Webpack
