@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TodoItem from '../TodoItem';
-import { TodoListProps } from '../interface'
+import { TodoListProps, TodoState } from '../interface'
 
 const TodoList: React.FC<TodoListProps> = ({ todos, toggleComplete, showFilters }) => {
   const [filter, setFilter] = useState('all');
@@ -25,7 +25,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, toggleComplete, showFilters 
         </div>
       )}
       <ul>
-        {filteredTodos.map((todo, index) => (
+        {filteredTodos.map((todo: TodoState, index: number) => (
           <TodoItem key={index} index={index} todo={todo} toggleComplete={toggleComplete} />
         ))}
       </ul>
