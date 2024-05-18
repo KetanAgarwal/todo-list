@@ -6,7 +6,7 @@ import AddTodoForm from './TodoForm';
 import { getTodos } from '../utils/todoStorage';
 import { TodoProps, TodoState } from './interface'
 
-const Todo: React.FC<TodoProps> = ({ showFilters }) => {
+const Todo: React.FC<TodoProps> = ({ showFilters, heading = 'Todo App' }) => {
   const [todos, setTodos] = useState(() => getTodos());
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Todo: React.FC<TodoProps> = ({ showFilters }) => {
 
   return (
     <div>
-      <h1>Todo App</h1>
+      <h1>{heading}</h1>
       <AddTodoForm addTodo={addTodo} />
       <TodoList todos={todos} toggleComplete={toggleComplete} showFilters={showFilters} />
     </div>

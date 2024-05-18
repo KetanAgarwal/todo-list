@@ -21,4 +21,5 @@ export interface TodoListProps {
 
 export interface TodoProps {
   showFilters?: boolean;
+  heading?: string;
 }

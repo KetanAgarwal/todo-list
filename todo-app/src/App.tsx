@@ -1,15 +1,15 @@
 import React, { ReactElement } from 'react'
 import Todo from './components'
-
-export interface AppProps {
-  showFilters?: boolean
-}
+import { TodoProps } from './components/interface'
 
 const App = ({
-  showFilters = false
-}: AppProps): ReactElement => {
+  showFilters = false,
+  heading = 'Todo App'
+}: TodoProps): ReactElement => {
   return (
-    <Todo showFilters={showFilters} />
+    <div>
+      <Todo showFilters={showFilters} heading={heading} />
+    </div>
   );
 }
 

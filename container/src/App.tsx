@@ -1,13 +1,12 @@
-import React, { ReactElement } from 'react'
-import Todo from 'todolist/Todo'
+import React from 'react'
+import Todo from 'todolist'
 
 const App = () => {
   return (
     <div>
-      Hello World
-      <Todo />
+      <Todo heading="Container App" />
     </div>
   );
 }
 
-export default App;
+export default App

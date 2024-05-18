@@ -2,12 +2,7 @@
 
 ## Overview
 
-This application is a microfrontend Todo List application built with React and TypeScript. It allows users to create, manage and filter todo tasks. The application consists of these microfrontend modules:
-
-1. **Todo**: Responsible to display todo list.
-2. **TodoForm**: Responsible for rendering input box and button to add a todo.
-3. **TodoList**: Responsible for rendering body of todo list. It shows filters and list of todo.
-4. **TodoItem**: Responsible for rendering individual todos.
+This is the container app of the micro frontend application. All the modules will be consumed in this app.
 
 ## Installation
 
@@ -22,7 +17,7 @@ To run this application locally, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-       cd todo-list
+       cd todo-list/container
    ```
 
 3. Install dependencies using npm or yarn:
@@ -41,7 +36,7 @@ To run this application locally, follow these steps:
        yarn start
    ```
 
-5. Open your browser and visit `http://localhost:3000` to view the application.
+5. Open your browser and visit `http://localhost:8080` to view the application.
 
 ## Usage
 

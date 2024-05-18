@@ -22,7 +22,7 @@ To run this application locally, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-       cd todo-list
+       cd todo-list/todo-app
    ```
 
 3. Install dependencies using npm or yarn:

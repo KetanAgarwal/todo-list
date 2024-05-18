@@ -1,20 +1,15 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const path = require('path');
+const deps = require("./package.json").dependencies;
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: './src/index',
+  output: {
+    publicPath: "http://localhost:8080/",
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
-  },
-  output: {
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-  },
-  optimization: {
-    moduleIds: 'deterministic',
-    runtimeChunk: 'single'
   },
   module: {
     rules: [{
@@ -40,7 +35,19 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         todolist: 'todolist@http://localhost:3000/remoteEntry.js'
-      }
-    })
+      },
+      shared: {
+        ...deps,
+        react: {
+          singleton: true,
+          requiredVersion: deps.react,
+        },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: deps["react-dom"],
+        },
+      },
+    }),
+    new Dotenv()
   ]
 };
